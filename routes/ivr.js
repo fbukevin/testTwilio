@@ -4,6 +4,7 @@ var twilio = require('twilio');
 
 // POST: '/ivr/welcome'
 router.post('/welcome', twilio.webhook({validate: false}), function (request, response) {
+    console.log('成功執行！電話進來了');
     // TwIML 是一個回應的設定物件
     var twiml = new twilio.TwimlResponse();  
     twiml.gather({
