@@ -37,3 +37,5 @@ router.post('/welcome', twilio.webhook({validate: false}), function (request, re
 你在網站設定好你這支電話對應的 request url (如：`http://<host>:<port>/ivr/welcome`)，你打到那個電話，就會被 express routing 到 /routes/ivr.js 的 router.postg('/welcome') 中，已經測試成功可以用了！
 
 ![](call_come.png)
+
+![](call_chinese.png)
