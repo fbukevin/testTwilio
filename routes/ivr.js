@@ -56,12 +56,9 @@ router.post('/planets', twilio.webhook({validate: false}), function (request, re
 
 var giveExtractionPointInstructions = function (twiml) {
 
-    // 這裡可以設定一段要自動回復的英文敘述(中文不知可否)，並指定要由誰發音(voice: "alice")和語言
-    twiml.say("To get to your extraction point, get on your bike and go down " +
-        "the street. Then Left down an alley. Avoid the police cars. Turn left " +
-        "into an unfinished housing development. Fly over the roadblock. Go " +
-        "passed the moon. Soon after you will see your mother ship.",
-        {voice: "alice", language: "en-GB"});
+    // 這裡可以設定一段要自動回復的，並指定要由誰發音("man" or "alice", alice 支援較多語系)和語言
+    twiml.say("這是來自台灣的測試，超酷的！希望快點有有台灣門號",
+        {voice: "alice", language: "zh-TW"});
 
     twiml.say("Thank you for calling the ET Phone Home Service - the " +
         "adventurous alien's first choice in intergalactic travel");
